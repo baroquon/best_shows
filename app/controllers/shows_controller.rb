@@ -5,7 +5,7 @@ class ShowsController < ApplicationController
   def index
     @shows = Show.all
 
-    render json: { "great-shows"=> @shows }
+    render json: { "great-shows"=> @shows }, include: :actors
   end
 
   # GET /shows/1
